@@ -167,9 +167,8 @@
   <section class="about-team -with-headline">
     <div class="headline">
       <h3>Our team</h3>
-      <p>We work towards having the creativity, agility, and empathy to keep pursuing better visions for our world.</p>
+      <p>We work towards having the creativity, agility, and empathy to keep pursuing better visions for our world.<br><br><span style="color:#bb8399;">Hello from our lovely homes!</span></p>
       <br>
-      <p style="color:#bb8399;">Hello from our lovely homes!</style></p>
     </div>
     <div class="team">
       <img src="../assets/images/team/roxy-21.jpg">
@@ -177,7 +176,7 @@
         <h4>Roxy Navarro-Arenal</h4>
         <h6>Creative Director</h6>
         <h6 class="home">Alfonso, Cavite</h6>
-        <p>Roxy’s past life included a corporate job while juggling the creation of Works of Heart. Being a jill of all trades, she wears many hats but is best in creative direction. She advocates for education and social entrepreneurship, believing they are key to achieving social justice in the country.</p>
+        <p>Roxy’s past life included a corporate job while juggling the creation of Works of Heart. She's a jill of all trades but is best in concept & direction. She advocates for education and social entrepreneurship, believing they are key to achieving social justice.</p>
       </div>
     </div>
     <div class="team">
@@ -343,7 +342,7 @@
     <h5>acknowledgements</h5>
     <p>Our sincerest gratitude to all who have helped build Works of Heart in the past and present. </p>
     <ul>
-      <li data-tippy="for leading the team in doing <b>good</b> design, among many things">Ena</li>
+      <li data-tippy="for leading the team in doing <u>good</u> design, among many things">Ena Escanan</li>
       <li data-tippy="for being one of our founding partners and building our branding service, among many things">Joreen Navarro</li>
       <li data-tippy="for being our intern then eventually a full-time designer & project manager">Dianne Aguas</li>
       <li data-tippy="for always helping us find the right words to say">Paolo Tiausas</li>
@@ -432,6 +431,16 @@
 h6.home {
       font-weight: 400;
       color:#bb8399;
+}
+
+h6.home::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f276';
+    display: block;
+    left: -2rem;
+    position: absolute;
+    color: var(--purple);
 }
 </style>
 
