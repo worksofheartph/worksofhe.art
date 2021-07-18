@@ -172,14 +172,14 @@
   </section>
 
   <!--  Start GRID    -->
-  <section class="full-width img-gallery">
+  <section class="full-width img-gallery safari-fix">
 
-    <img src="/assets/images/project-girlscan/gc-7.png" class="safari-only" data-action="zoom">
-    <img src="/assets/images/project-girlscan/gc-8.png"  class="safari-only" data-action="zoom">
-    <img src="/assets/images/project-girlscan/gc-9.png"  class="safari-only" data-action="zoom">
-    <img src="/assets/images/project-girlscan/gc-10.png" class="safari-only"  data-action="zoom">
-    <img src="/assets/images/project-girlscan/gc-11.png" class="safari-only"  data-action="zoom">
-    <img src="/assets/images/project-girlscan/gc-12.png"  class="safari-only" data-action="zoom">
+    <img src="/assets/images/project-girlscan/gc-7.png" data-action="zoom">
+    <img src="/assets/images/project-girlscan/gc-8.png" data-action="zoom">
+    <img src="/assets/images/project-girlscan/gc-9.png"  data-action="zoom">
+    <img src="/assets/images/project-girlscan/gc-10.png" data-action="zoom">
+    <img src="/assets/images/project-girlscan/gc-11.png" data-action="zoom">
+    <img src="/assets/images/project-girlscan/gc-12.png" data-action="zoom">
 
 
   </section>
@@ -408,10 +408,17 @@
   @media not all and (min-resolution:.001dpcm)
   { @supports (-webkit-appearance:none) {
 
-          img.safari-only
+          .safari-fix img
           { height: 550px !important;}
 
   }}
+
+  @supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */
+          .safari-fix {
+            display: inline-block;
+          }
+  }
 
   /* @media screen and (-webkit-min-device-pixel-ratio: 0)
   { _
