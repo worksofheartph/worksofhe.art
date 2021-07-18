@@ -1346,7 +1346,7 @@ h5.caption {
     border-radius: 22px;
     font-size: 12px;
     display: inline-block;
-    margin-bottom: 0.5em 0;  
+    margin-bottom: 0.5em 0;
 }
 
 #post-content .PR-button img {
@@ -1425,7 +1425,7 @@ h5.caption {
 #post-content .PR-button:hover {
   background-color: #4C69F7 !important;
   color: #fff !important;
-} 
+}
 
 #post-content img {
   width: 100%;
@@ -1739,4 +1739,18 @@ h5.caption {
   .project-hero > img, .project-hero-text {
     overflow: auto;
   }
+}
+
+@media not all and (min-resolution:.001dpcm)
+  { @supports (-webkit-appearance:none) {
+
+          .safari-fix img
+          { height: 550px !important;}
+
+  }}
+
+  @supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */
+            .safari-fix img
+            { height: 150px !important;}
 }
