@@ -454,6 +454,9 @@
     </div>
 
     <div class="mobile-full">
+      <div id="contact-success">
+        Thank you for your message! We'll get back to you soon.
+      </div>
       <form action="https://getform.io/f/27875c87-44a3-40eb-93fd-79a70f13d404" method="POST">
         <label for="name">Name</label><input name="name" type="text" required="required"><br/>
         <label for="position">Position</label><input name="position" type="text" required="required"><br/>
@@ -464,9 +467,6 @@
         <label for="referrer">How did you find out about us?</label><input name="referrer" type="text" required="required">
         <button id="contact-submit" value="submit" type="submit">Submit</button>
       </form>
-      <div id="contact-success">
-        Thank you for your message! We'll get back to you soon.
-      </div>
     </div>
   </section>
 </main>
@@ -479,9 +479,8 @@ h6.home {
 
 #contact-success {
   display: block;
-  color: white;
-  background-color: var(--teal);
-  padding: 2%;
+  color: var(--teal);
+  padding-bottom: 5%;
   font-size: 1.3em;
 }
 
