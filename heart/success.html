@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Design for Impact &nbsp;· &nbsp;Works of Heart</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Our design is rooted in the genuine consideration of complex social realities and personal experiences. We strive to create work that is truly meaningful, from our process all the way to our output.">
+  <meta name="author" content="Works of Heart">
+  <meta property="og:title" content="Design for Impact &nbsp;· &nbsp;Works of Heart" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Our design is rooted in the genuine consideration of complex social realities and personal experiences. We strive to create work that is truly meaningful, from our process all the way to our output." />
+  <meta property="og:image:secure_url" content="/assets/images/woh-about-share.jpg" />
+  <meta property="og:image" content="/assets/images/woh-about-share.jpg" />
+  <meta property="og:image:width" content="1000" />
+  <meta property="og:image:height" content="520" />
+  <meta property="og:url" content="" />
+  <meta property="og:site_name" content="Design for Impact &nbsp;· &nbsp;Works of Heart" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@worksofhe.art" />
+  <meta name="twitter:creator" content="@worksofhe.art" />
+  <meta name="twitter:title" content="Design for Impact &nbsp;· &nbsp;Works of Heart" />
+  <meta name="twitter:description" content="Our design is rooted in the genuine consideration of complex social realities and personal experiences. We strive to create work that is truly meaningful, from our process all the way to our output." />
+  <meta name="twitter:image" content="/assets/images/woh-about-share.jpg" />
+
+  <link rel="stylesheet" href="https://use.typekit.net/lyk0uyc.css">
+  <link rel="stylesheet" href="/assets/css/sanitize.min.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link href="/assets/css/zoom.css" rel="stylesheet">
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/transition.js"></script>
+  <script src="/assets/js/zoom.js"></script>
+  <script src="https://kit.fontawesome.com/b5cb587c35.js"></script>
+
+    <!-- Google Analytics -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108442585-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-108442585-1');
+    </script>
+
+
+    <!-- Google Tag Manager -->
+
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K26C52D');</script>
+  <!-- End Google Tag Manager -->
+
+
+</head>
+<body>
+  <section id="contact" class="about-contact mobile-flex-none">
+    <!--<div class="mobile-full"><br>
+      <h3>Let's do good work together — <u style="color:var(--teal);">hello@worksofheart.design</u></h3><br><br>
+    </div>-->
+
+    <div class="mobile-full">
+      <h3>Thank you for your message!</h3><br>
+
+    </div>
+  </section>
+</main>
+
+<style>
+h6.home {
+      font-weight: 400;
+      color:#C0C8CE;
+}
+
+.about-contact form {
+  width: 900px;
+}
+
+#contact h3 {font-size: 2.8em;}
+</style>
+
+<script>
+  var steps = document.querySelectorAll('.process-step')
+  var dotsContainer = document.querySelector('.process-dots')
+  var dots = Array(steps.length).fill().map(function (_, i) {
+    var dot = document.createElement('span')
+    dot.textContent = i + 1
+    dot.addEventListener('click', function () { setActiveStep(i) })
+    dotsContainer.appendChild(dot)
+    return dot
+  })
+  function setActiveStep (i) {
+    steps.forEach(function (step, j) {
+      step.classList.toggle('active', i === j)
+      dots[j].classList.toggle('active', i === j)
+    })
+  }
+  setActiveStep(0)
+</script>
+
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@4"></script>
+<script>
+  tippy.setDefaults({
+    animation: 'fade',
+    arrow: true,
+  })
+</script>
+
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+  function onSubmit(token) {
+    var form = document.querySelector('form')
+    if (!form.reportValidity()) {
+      return
+    }
+
+    var submitButton = form.querySelector('button')
+    submitButton.disabled = true
+    submitButton.textContent = 'Submitting...'
+
+    var success = document.querySelector('#contact-success')
+    success.style.display = 'none'
+
+    var formData = {}
+    for (entry of (new FormData(form)).entries()) {
+      formData[entry[0]] = entry[1]
+    }
+
+    fetch(form.action, {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+      .then(function(resp) { return resp.json() })
+      .then(function(data) {
+        console.log(data)
+        form.reset()
+        success.style.display = 'block'
+        submitButton.disabled = false
+        submitButton.textContent = 'Submit'
+      })
+  }
+</script>
+
+  <section class="woh-menu sticky">
+    <div class="works"><a href="/">Works</a></div>
+    <a href="/" class="woh-heart"><img src="/assets/images/woh-logo.svg"></a>
+    <div class="heart"><a href="/heart">Heart</a></div>
+  </section>
+  <footer>
+  <div class="footer-tagline mobile-full">
+    <div class="footer-tagline-content mobile-full">
+      <h3 class="mobile-full">Good design,<br>for good<img src="/assets/images/woh-logo-coffee.svg"></h3>
+      <nav class="mobile-full">
+        <a href="/">Works</a>
+        <a href="/heart">Heart</a>
+        <a href="/stories">Stories</a>
+        <a href="/heart#contact">Contact</a>
+      </nav>
+      <div class="mobile-only">
+          <a href="/heart"><strong>Works of Heart Design studio</strong> is a Filipino social impact design studio. We believe in
+        matching social imagination with good design&mdash;to engage, transform, and shape a
+        nation that is free. See how and why we do it.</a>
+        <br/><br/>
+        <address>Metro Manila, Philippines</address>
+        <div class="email">hello@worksofheart.design</div>
+        <div class="social">
+        <a href="https://www.facebook.com/worksofheartph/" target="_blank"><i class="fab fa-facebook"></i></a>&nbsp;
+        <a href="https://www.instagram.com/worksofhe.art/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-contact non-mobile">
+    <div class="footer-contact-content">
+      <strong>Works of Heart Design Studio</strong>
+      <address>Metro Manila, Philippines</address>
+      <div class="email">hello@worksofheart.design</div>
+      <div class="social">
+        <a href="https://www.facebook.com/worksofheartph/" target="_blank"><i class="fab fa-facebook"></i></a>&nbsp;
+        <a href="https://www.instagram.com/worksofhe.art/" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var menu = document.querySelector('.woh-menu')
+  var stickyMenu = document.querySelector('.woh-menu.sticky')
+  var menuY = menu.offsetTop
+  var prevStick
+  function onScroll () {
+    var y = window.scrollY || window.pageYOffset
+    var stick = y > menuY
+    if (prevStick !== stick) {
+      stickyMenu.style.display = stick ? 'flex' : 'none'
+      menu.style.opacity = stick ? 0 : 1
+      prevStick = stick
+    }
+  }
+  window.addEventListener('scroll', function () {
+    window.requestAnimationFrame(onScroll)
+  })
+}())
+</script>
+
+</body>
+</html>
