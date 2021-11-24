@@ -182,15 +182,19 @@ a:focus-visible {
 	will-change: transform;
 }
 
-.menu__item::before {
-	counter-increment: menucounter;
-	content: counters(menucounter, ".", decimal-leading-zero);
+.menu__before {
 	position: absolute;
 	left: 0;
 	top: 0;
 	color: #BA8499;
 	z-index: -1;
 	line-height: 1;
+
+}
+
+.menu__before img{
+	width: 25px;
+	padding-right: 2px;
 }
 
 
@@ -306,7 +310,7 @@ a:focus-visible {
 		justify-self: end;
 	}
 	.menu {
-		padding: 21vh 1rem 3rem;
+		padding: 18vh 1rem 3rem;
 	}
 	.menu__item::before {
 		left: 1vw;
@@ -370,4 +374,25 @@ button:hover {
 p {
 	font-family: karla;
 	color: #2EA39A;
+}
+
+h1.frame__title, .frame__links a {
+	font-family: karla;
+	color: #2EA39A;
+	text-decoration: none !important;
+	padding-top: 20px;
+}
+
+p.content {
+	font-family: karla;
+	color: # !important;
+	font-size: 16px;
+}
+
+a {
+		text-decoration: none;
+}
+
+.frame{
+	text-align: center;
 }
