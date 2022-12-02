@@ -1739,7 +1739,12 @@ h5.caption {
   .project-hero > img, .project-hero-text {
     overflow: auto;
   }
+
+  .project-details {
+    min-height: 300px;
+  }
 }
+
 
 @media not all and (min-resolution:.001dpcm)
   { @supports (-webkit-appearance:none) {
