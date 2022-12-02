@@ -1741,7 +1741,7 @@ h5.caption {
   }
 
   .project-details {
-    min-height: 300px;
+    display: none;
   }
 }
 
